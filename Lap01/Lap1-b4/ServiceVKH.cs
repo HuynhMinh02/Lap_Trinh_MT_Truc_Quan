@@ -8,5 +8,9 @@ namespace Lap1_b4
 {
     internal class ServiceVKH
     {
+        public void Input()
+        {
+
+        }
     }
 }
