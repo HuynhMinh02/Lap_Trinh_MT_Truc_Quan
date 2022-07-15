@@ -10,7 +10,9 @@ namespace Lap1_bai4
     internal class ServiceVienKhoaHoc
     {
         private ArrayList listperson = new ArrayList();
+
         private Person p = new Person();
+
         private ConsoleInputing input = new ConsoleInputing();
 
         public ServiceVienKhoaHoc()
@@ -85,6 +87,13 @@ namespace Lap1_bai4
             }
 
         }
+
+        public void tinhLuong()
+        {
+
+        }
+
+
 
         public void Output()
         {
