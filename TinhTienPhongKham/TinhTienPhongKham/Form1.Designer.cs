@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.nhoRang = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.trongRang = new System.Windows.Forms.NumericUpDown();
+            this.tayRang = new System.Windows.Forms.CheckBox();
+            this.niengRang = new System.Windows.Forms.CheckBox();
+            this.btn_TinhTien = new System.Windows.Forms.Button();
             this.txt_ten = new System.Windows.Forms.TextBox();
             this.txt_TinhTien = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            this.label2 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.nhoRang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trongRang)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -57,16 +57,6 @@
             this.label1.Size = new System.Drawing.Size(388, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "ỨNG DỤNG TÍNH TIỀN PHÒNG KHÁM";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(24, 92);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(152, 19);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Thông tin khách hàng";
             // 
             // label3
             // 
@@ -92,7 +82,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(24, 268);
+            this.label5.Location = new System.Drawing.Point(24, 297);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 19);
             this.label5.TabIndex = 4;
@@ -107,13 +97,14 @@
             this.label6.Size = new System.Drawing.Size(0, 19);
             this.label6.TabIndex = 5;
             // 
-            // numericUpDown1
+            // nhoRang
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(242, 394);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(67, 26);
-            this.numericUpDown1.TabIndex = 7;
+            this.nhoRang.Location = new System.Drawing.Point(242, 394);
+            this.nhoRang.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.nhoRang.Name = "nhoRang";
+            this.nhoRang.Size = new System.Drawing.Size(67, 26);
+            this.nhoRang.TabIndex = 7;
+            this.nhoRang.ValueChanged += new System.EventHandler(this.nhoRang_ValueChanged);
             // 
             // label7
             // 
@@ -134,43 +125,48 @@
             this.label8.Size = new System.Drawing.Size(82, 19);
             this.label8.TabIndex = 9;
             this.label8.Text = "Trồng răng";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
-            // numericUpDown2
+            // trongRang
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(242, 435);
-            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(67, 26);
-            this.numericUpDown2.TabIndex = 10;
+            this.trongRang.Location = new System.Drawing.Point(242, 435);
+            this.trongRang.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.trongRang.Name = "trongRang";
+            this.trongRang.Size = new System.Drawing.Size(67, 26);
+            this.trongRang.TabIndex = 10;
+            this.trongRang.ValueChanged += new System.EventHandler(this.trongRang_ValueChanged);
             // 
-            // checkBox1
+            // tayRang
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(113, 331);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(93, 23);
-            this.checkBox1.TabIndex = 11;
-            this.checkBox1.Text = "Tẩy trắng";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.tayRang.AutoSize = true;
+            this.tayRang.Location = new System.Drawing.Point(113, 331);
+            this.tayRang.Name = "tayRang";
+            this.tayRang.Size = new System.Drawing.Size(93, 23);
+            this.tayRang.TabIndex = 11;
+            this.tayRang.Text = "Tẩy trắng";
+            this.tayRang.UseVisualStyleBackColor = true;
+            this.tayRang.CheckedChanged += new System.EventHandler(this.tayRang_CheckedChanged);
             // 
-            // checkBox2
+            // niengRang
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(269, 331);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(102, 23);
-            this.checkBox2.TabIndex = 12;
-            this.checkBox2.Text = "Niềng răng";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.niengRang.AutoSize = true;
+            this.niengRang.Location = new System.Drawing.Point(269, 331);
+            this.niengRang.Name = "niengRang";
+            this.niengRang.Size = new System.Drawing.Size(102, 23);
+            this.niengRang.TabIndex = 12;
+            this.niengRang.Text = "Niềng răng";
+            this.niengRang.UseVisualStyleBackColor = true;
+            this.niengRang.CheckedChanged += new System.EventHandler(this.niengRang_CheckedChanged);
             // 
-            // button1
+            // btn_TinhTien
             // 
-            this.button1.Location = new System.Drawing.Point(108, 515);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 23);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Tính tiền";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_TinhTien.Location = new System.Drawing.Point(108, 515);
+            this.btn_TinhTien.Name = "btn_TinhTien";
+            this.btn_TinhTien.Size = new System.Drawing.Size(87, 23);
+            this.btn_TinhTien.TabIndex = 13;
+            this.btn_TinhTien.Text = "Tính tiền";
+            this.btn_TinhTien.UseVisualStyleBackColor = true;
+            this.btn_TinhTien.Click += new System.EventHandler(this.btn_TinhTien_Click);
             // 
             // txt_ten
             // 
@@ -178,6 +174,7 @@
             this.txt_ten.Name = "txt_ten";
             this.txt_ten.Size = new System.Drawing.Size(246, 26);
             this.txt_ten.TabIndex = 14;
+            this.txt_ten.TextChanged += new System.EventHandler(this.txt_ten_TextChanged);
             // 
             // txt_TinhTien
             // 
@@ -195,10 +192,21 @@
             this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(164, 168);
+            this.comboBox1.MaxDropDownItems = 3;
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(108, 27);
             this.comboBox1.TabIndex = 16;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(24, 92);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(152, 19);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Thông tin khách hàng";
             // 
             // Form1
             // 
@@ -209,13 +217,13 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.txt_TinhTien);
             this.Controls.Add(this.txt_ten);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.numericUpDown2);
+            this.Controls.Add(this.btn_TinhTien);
+            this.Controls.Add(this.niengRang);
+            this.Controls.Add(this.tayRang);
+            this.Controls.Add(this.trongRang);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.nhoRang);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -226,8 +234,8 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nhoRang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trongRang)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,20 +244,20 @@
         #endregion
 
         private Label label1;
-        private Label label2;
         private Label label3;
         private Label label4;
         private Label label5;
         private Label label6;
-        private NumericUpDown numericUpDown1;
+        private NumericUpDown nhoRang;
         private Label label7;
         private Label label8;
-        private NumericUpDown numericUpDown2;
-        private CheckBox checkBox1;
-        private CheckBox checkBox2;
-        private Button button1;
+        private NumericUpDown trongRang;
+        private CheckBox tayRang;
+        private CheckBox niengRang;
+        private Button btn_TinhTien;
         private TextBox txt_ten;
         private TextBox txt_TinhTien;
         private ComboBox comboBox1;
+        private Label label2;
     }
 }
