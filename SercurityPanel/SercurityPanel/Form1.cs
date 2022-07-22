@@ -148,5 +148,10 @@ namespace SercurityPanel
             }
             MessageBox.Show("Save Access");
         }
+
+        private void listLog_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

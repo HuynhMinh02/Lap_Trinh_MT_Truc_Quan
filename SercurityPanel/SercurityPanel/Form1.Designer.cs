@@ -222,6 +222,7 @@
             this.listLog.Name = "listLog";
             this.listLog.Size = new System.Drawing.Size(290, 94);
             this.listLog.TabIndex = 15;
+            this.listLog.SelectedIndexChanged += new System.EventHandler(this.listLog_SelectedIndexChanged);
             // 
             // bntSave
             // 
