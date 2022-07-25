@@ -56,8 +56,8 @@
         {
             if (!String.IsNullOrEmpty(txt_ten.Text) && !String.IsNullOrEmpty(comboBox1.Text))
             {
-  
-                txt_TinhTien.Text = Convert.ToString(tt1 + tt2 + tt3 + tt4);
+
+                txt_TinhTien.Text = Convert.ToString(tt1 + tt2 + tt3 + tt4) + " " + "VND";
             }
             else
             {
