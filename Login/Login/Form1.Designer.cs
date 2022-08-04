@@ -180,6 +180,7 @@
             this.image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.image.TabIndex = 12;
             this.image.TabStop = false;
+            this.image.Click += new System.EventHandler(this.image_Click);
             // 
             // bntPic
             // 

@@ -82,6 +82,11 @@ namespace Login
                 MessageBox.Show("Error");
             }
         }
+
+        private void image_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

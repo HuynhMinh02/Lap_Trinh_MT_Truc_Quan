@@ -29,7 +29,7 @@ namespace SimpleClock
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            bitmap = new Bitmap(Width + 1, Height + 1);
+            bitmap = new Bitmap(Width + 2, Height + 2 );
 
             //Tâm của các kim đồng hồ
             x = Width / 2;
@@ -60,10 +60,10 @@ namespace SimpleClock
             graphics.DrawEllipse(new Pen(Color.Black, 1f), 0, 0, Width, Height);
 
 
-            graphics.DrawString("12", new Font("Arial", 12), Brushes.Red, new PointF(140, 2));
             graphics.DrawString("3", new Font("Arial", 12), Brushes.Red, new PointF(286, 140));
             graphics.DrawString("6", new Font("Arial", 12), Brushes.Red, new PointF(142, 282));
             graphics.DrawString("9", new Font("Arial", 12), Brushes.Red, new PointF(0, 140));
+            graphics.DrawString("12", new Font("Arial", 12), Brushes.Red, new PointF(140, 2));
 
 
             handCoord = msCoord(ss, secondHand);
